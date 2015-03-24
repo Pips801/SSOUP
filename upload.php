@@ -7,17 +7,15 @@
 $file_size_limit = "30"; // the maximum file size in MB.
 $allowed_directories = ["folder_1", "folder_2"]; // the directories that can have a file uploaded to.
 $administrator_PIN = "1234"; // the PIN that authenticate the upload.
-$current_version = "0.6.1";
+$current_version = "0.6.2";
 
 
 /*
     UPLOAD
 */
 
-// non-POST interceptor. If the page is accessed directly, it will re-direct to the index.
+// non-POST interceptor. 
 if(isset($_FILES["file"])){
-  
-
 
 
 $target_directory = "./" . $_POST["directory"] . "/"; // The target directory to put the file
@@ -53,7 +51,7 @@ if(!file_exists($target_directory)){
     // check if the directly is in the allowed list, but not created yet.
     if(in_array($_POST["directory"], $allowed_directories)){
         mkdir($target_directory);
-        echo("Created " . $_POST["directory"] . "<br>");
+        chmod($target_directory, 0666);
     }else{
         
         $upload_OK = false;
@@ -90,7 +88,7 @@ if(!$upload_OK){
     
     // everything is fine, attempt to save the file.
     if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
-        echo "The file was uploaded. at <a href='" .$target_directory ."'>".$target_directory ."</a>";
+        echo "The file was uploaded. at <a href='" .$target_file ."'>".$target_file ."</a>";
     } else {
         echo "There was an error saving the file to " . $target_directory;
     }
