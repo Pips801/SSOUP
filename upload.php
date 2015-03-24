@@ -15,9 +15,9 @@ $current_version = "0.6.1";
 */
 
 // non-POST interceptor. If the page is accessed directly, it will re-direct to the index.
-if(!isset($_FILES["file"])){
-  header('Location: ./');
-}
+if(isset($_FILES["file"])){
+  
+
 
 
 $target_directory = "./" . $_POST["directory"] . "/"; // The target directory to put the file
@@ -96,7 +96,7 @@ if(!$upload_OK){
     }
     
 }
-
+}
 
 
 ?>
