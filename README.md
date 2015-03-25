@@ -1,5 +1,8 @@
 # SSOUP
 
+This work is protected by the DBAD (Dont Be A Dick) License. http://www.dbad-license.org
+
+
 SSOUP is a piece of software that allows you quickly and quietly upload files to a specific set of folders on the go, without an FTP client, passwords, security keys, etc.  
 
 How does it work? Well. it's a bit like Imgur. You upload a file, and it gives you a link to the file. Unlike Imgur, you can upload more than just images, and you get to keep them on your own server. 
