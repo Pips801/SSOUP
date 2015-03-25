@@ -6,8 +6,8 @@
 
 
 $file_size_limit = "30"; // the maximum file size in MB. Make sure that you're php.ini is set to allow this high or higher sizes.
-$allowed_directories = ["images", "files", "memes"]; // the directories that can have a file uploaded to.
 $storage_folder = "./files/"; // the folder where everything is stored. I STRONGLY advise against setting this to the same folder these scripts run in. 
+$allowed_directories = ["images", "files", "memes"]; // the directories that can have a file uploaded to.
 $administrator_PIN = "1234"; // the PIN that authenticate the upload.
 
 $current_version = "1.0"; // please do not change.
