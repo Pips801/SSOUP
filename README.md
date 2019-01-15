@@ -17,7 +17,7 @@ There's no databse configuration, no crazy files or ports.
  2.  Done. Seriously, that's it.
 
 
-##Configuration
+## Configuration
 
 The configuration is pretty straight-forward, but I'll go over it line-by-line.
 
@@ -30,7 +30,7 @@ The configuration is located inside of `index.php`, at the top.
 - `$administrator_PIN` is the *password* that authenticates the upload. If this wasn't here, anybody could upload anything they wanted. This can be **as long as you want it to be**, and it can also be **text instead of numbers**. I would change this from the default of `1234`, but that's just me.
 
 
-##Security
+## Security
 
 Security options. They're important. They prevent somebody from completely deleting everything and screwing your server up.
 
